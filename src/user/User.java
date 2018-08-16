@@ -1,9 +1,7 @@
 package user;
 
-import chat.Chat;
 import myexceptions.AuthorizationException;
 
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,8 +11,6 @@ import java.util.regex.Pattern;
  * @version 1.0
  */
 public class User {
-    /** Список чатов пользователя*/
-    private ArrayList<Chat> chats;
     /** Логин пользоваетля*/
     private String login;
     /** Пароль пользователя*/
@@ -33,13 +29,7 @@ public class User {
             throw new AuthorizationException("Ошибка при авторизации");
         this.login = login;
         this.password = password;
-    }
-    /**
-     * метод возвращает чаты пользователя
-     * @return
-     */
-    public ArrayList<Chat> getChats() {
-        return chats;
+        name = null;
     }
 
     /**
@@ -88,14 +78,6 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    /**
-     * метод добавляет чат
-     * @param chat - чат
-     */
-    public void addChat(Chat chat){
-        chats.add(chat);
     }
 
     /**

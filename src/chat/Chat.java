@@ -2,7 +2,9 @@ package chat;
 
 import myexceptions.MessageMyException;
 import myexceptions.ParticipantMyException;
-import java.util.ArrayList;
+import user.User;
+
+import java.util.LinkedList;
 
 /**
  * Класс Чат, хранит сообщение и участников чата
@@ -14,9 +16,21 @@ public class Chat {
     /**id чата */
     private Long id;
     /**список сообщений */
-    private ArrayList<Long> messages;
+    private LinkedList<Long> messages;
     /**список участников */
-    private ArrayList<Long> participanties;
+    private LinkedList<Long> participanties;
+    /**админ чата*/
+    private User admin;
+
+    /**
+     * Конструктор
+     * @param id - id чата
+     * @param admin - User админ чата
+     */
+    public Chat(Long id, User admin){
+        this.id = id;
+        this.admin = admin;
+    }
 
     /**
      * метод добавляет id сообщения в чат
@@ -44,7 +58,7 @@ public class Chat {
      * метод возвращает все id сообщения в чате
      * @return
      */
-    public ArrayList<Long> getMessages() {
+    public LinkedList<Long> getMessages() {
         return messages;
     }
 
@@ -52,7 +66,7 @@ public class Chat {
      * метод возвращает всех участников чата
      * @return
      */
-    public ArrayList<Long> getParticipanties() {
+    public LinkedList<Long> getParticipanties() {
         return participanties;
     }
 
@@ -79,7 +93,7 @@ public class Chat {
 
     /**
      * метод проверяет, что сообщения с таким id еще нет в чате
-     * @param m
+     * @param m - id сообщения
      * @return
      */
     private boolean checkMessages(Long m){
