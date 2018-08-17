@@ -1,11 +1,13 @@
 package messages;
 
+import java.io.Serializable;
+
 /**
  * Класс сообщения
  * @author Егор Соловьев
  * @version 1.0
  */
-public class Message {
+public class Message  implements Serializable{
     /** Тип сообщения*/
     protected MessagesType messagesType;
 
