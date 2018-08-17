@@ -11,6 +11,8 @@ import java.util.regex.Pattern;
  * @version 1.0
  */
 public class User {
+    /** id пользователя*/
+    private Long id;
     /** Логин пользоваетля*/
     private String login;
     /** Пароль пользователя*/
@@ -22,14 +24,24 @@ public class User {
      * Конструктор
      * @param login - логин
      * @param password - пароль
+     * @param  id - id пользователя
      * @throws  AuthorizationException
      */
-    public  User(String login, String password) throws AuthorizationException {
+    public  User(Long id, String login, String password) throws AuthorizationException {
         if(!checkLogin(login) || !(checkPassword(password)))
             throw new AuthorizationException("Ошибка при авторизации");
         this.login = login;
         this.password = password;
+        this.id = id;
         name = null;
+    }
+
+    /**
+     * метод возвращает id
+     * @return
+     */
+    public Long getId() {
+        return id;
     }
 
     /**

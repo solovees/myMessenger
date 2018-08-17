@@ -15,12 +15,12 @@ public class Chat {
 
     /**id чата */
     private Long id;
-    /**список сообщений */
+    /**список id сообщений */
     private LinkedList<Long> messages;
-    /**список участников */
+    /**список id участников */
     private LinkedList<Long> participanties;
     /**админ чата*/
-    private User admin;
+    private User admin = null;
 
     /**
      * Конструктор
@@ -49,7 +49,7 @@ public class Chat {
      * @throws ParticipantMyException
      */
     public  void addParticipant(Long p) throws ParticipantMyException {
-        if(!checkParticipanties(p))
+        if(!checkParticipants(p))
             throw new ParticipantMyException("Участник с таким id уже существует в чате");
         participanties.add(p);
     }
@@ -83,13 +83,23 @@ public class Chat {
      * @param p - id участника
      * @return
      */
-    private boolean checkParticipanties(Long p){
+    private boolean checkParticipants(Long p){
         for(Long participant: participanties){
             if(p.equals(participant))
                 return false;
         }
         return true;
     }
+
+    /**
+     * метод возвращает админа чата
+     * @return
+     */
+    public User getAdmin() {
+        return admin;
+    }
+
+
 
     /**
      * метод проверяет, что сообщения с таким id еще нет в чате

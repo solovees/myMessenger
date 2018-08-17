@@ -1,5 +1,9 @@
 package messages;
 
+/**
+ * Enum для хранения типов команд
+ * @author Егор Соловьев
+ */
 public enum MessagesType {
     USER_LOGIN,     // команда /login
     USER_INFO,      // команда /user_info
