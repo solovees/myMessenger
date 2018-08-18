@@ -1,6 +1,6 @@
-package protocol;
+package main.protocol;
 
-import messages.Message;
+import main.messages.Message;
 
 import java.net.ProtocolException;
 

@@ -1,4 +1,4 @@
-package messages;
+package main.messages;
 
 /**
  * Класс сообщение, для отправки сообщения в чат

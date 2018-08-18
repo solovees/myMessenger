@@ -1,6 +1,6 @@
-package protocol;
+package main.protocol;
 
-import messages.Message;
+import main.messages.Message;
 
 import java.io.*;
 import java.net.ProtocolException;
@@ -19,9 +19,9 @@ public class BinaryProtocol implements Protocol{
             oos.writeObject(message);
             byte[] objData = bos.toByteArray();
             return objData;
-            
+
         } catch (IOException e) {
-            throw new ProtocolException("Faild to enecode message");
+            throw new ProtocolException("Failed to encode message");
         }
     }
 
@@ -31,9 +31,9 @@ public class BinaryProtocol implements Protocol{
             ObjectInput ois = new ObjectInputStream(bys)){
             return  (Message) ois.readObject();
         } catch (IOException e) {
-            throw new ProtocolException("Faild to decode message");
+            throw new ProtocolException("Failed to decode message");
         } catch (ClassNotFoundException e) {
-            throw new ProtocolException("Faild to decode message");
+            throw new ProtocolException("Failed to decode message");
         }
     }
 }

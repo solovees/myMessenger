@@ -1,4 +1,4 @@
-package messages;
+package main.messages;
 
 /**
  * Класс сообщения , все чаты пользователя

@@ -1,4 +1,4 @@
-package messages;
+package main.messages;
 
 /**
  * Класс сообщения для установки никнейма пользователя

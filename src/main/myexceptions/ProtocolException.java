@@ -1,4 +1,4 @@
-package myexceptions;
+package main.myexceptions;
 
 public class ProtocolException extends Exception {
     public ProtocolException(String message){

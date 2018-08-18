@@ -1,4 +1,4 @@
-package messages;
+package main.messages;
 
 /**
  * Класс сообщения , поиск в чате подстроки

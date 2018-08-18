@@ -1,4 +1,4 @@
-package messages;
+package main.messages;
 
 /**
  * Enum для хранения типов команд
@@ -7,7 +7,7 @@ package messages;
 public enum MessagesType {
     USER_LOGIN,     // команда /login
     USER_INFO,      // команда /user_info
-    USER_NAME,      // команда /user
+    USER_NAME,      // команда /main.user
     USER_PASS,      // команда /user_pass
     CHAT_LIST,      // команда /chat_list
     CHAT_CREATE,    // команда /chat_create

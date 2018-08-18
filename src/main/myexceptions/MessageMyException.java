@@ -1,4 +1,4 @@
-package myexceptions;
+package main.myexceptions;
 
 public class MessageMyException extends Exception {
     public MessageMyException(String message){

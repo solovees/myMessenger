@@ -1,6 +1,6 @@
-package user;
+package main.user;
 
-import myexceptions.AuthorizationException;
+import main.myexceptions.AuthorizationException;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

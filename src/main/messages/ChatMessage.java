@@ -1,4 +1,4 @@
-package messages;
+package main.messages;
 
 /**
  * Класс сообщения, поиск чата и возвращает историю сообщений чата

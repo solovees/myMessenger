@@ -1,8 +1,8 @@
-package chat;
+package main.chat;
 
-import myexceptions.MessageMyException;
-import myexceptions.ParticipantMyException;
-import user.User;
+import main.myexceptions.MessageMyException;
+import main.myexceptions.ParticipantMyException;
+import main.user.User;
 
 import java.util.LinkedList;
 
