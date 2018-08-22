@@ -29,7 +29,7 @@ public class User {
      */
     public  User(Long id, String login, String password) throws AuthorizationException {
         if(!checkLogin(login) || !(checkPassword(password)))
-            throw new AuthorizationException("Ошибка при авторизации");
+            throw new AuthorizationException("Ошибка при создании пользователя");
         this.login = login;
         this.password = password;
         this.id = id;

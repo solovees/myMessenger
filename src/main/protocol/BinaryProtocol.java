@@ -9,7 +9,7 @@ import java.net.ProtocolException;
  * Класс бинарного протокола, сериализация сообщений
  * @author Егор Соловьев
  */
-public class BinaryProtocol implements Protocol{
+public class BinaryProtocol implements Protocol {
 
     @Override
     public byte[] encode(Message message) throws ProtocolException {

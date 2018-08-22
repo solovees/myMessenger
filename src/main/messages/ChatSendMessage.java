@@ -7,6 +7,8 @@ package main.messages;
 public class ChatSendMessage extends ChatMessage {
     /** Текстовое сообщение */
     private String content;
+    /** логин пользователя */
+    private String login;
 
 
     /**
@@ -31,5 +33,21 @@ public class ChatSendMessage extends ChatMessage {
      */
     public void setContent(String content) {
         this.content = content;
+    }
+
+    /**
+     * метод возвращает логин
+     * @return
+     */
+    public String getLogin() {
+        return login;
+    }
+
+    /**
+     * метод устанавливает логин
+     * @param login - логин
+     */
+    public void setLogin(String login) {
+        this.login = login;
     }
 }

@@ -20,14 +20,14 @@ public class Chat {
     /**список id участников */
     private LinkedList<Long> participanties;
     /**админ чата*/
-    private User admin = null;
+    private Long admin;
 
     /**
      * Конструктор
      * @param id - id чата
      * @param admin - User админ чата
      */
-    public Chat(Long id, User admin){
+    public Chat(Long id, Long admin){
         this.id = id;
         this.admin = admin;
     }
@@ -95,7 +95,7 @@ public class Chat {
      * метод возвращает админа чата
      * @return
      */
-    public User getAdmin() {
+    public Long getAdmin() {
         return admin;
     }
 
