@@ -10,7 +10,6 @@ import java.io.IOException;
  * @author Егор Соловьев
  */
 public interface ConnectionHandler {
-
     /**
      * Отправить сообщение.
      * Требуется обработать 2 типа ошибок

@@ -1,5 +1,7 @@
 package main.ServerPart.net.commands;
 
+import main.ServerPart.Store.MessageStoreClass;
+import main.ServerPart.Store.UserStoreClass;
 import main.ServerPart.net.Session;
 import main.messages.LoginMessage;
 import main.messages.Message;
@@ -14,11 +16,19 @@ public class LoginCommand implements Command {
     private String pass;
 
     @Override
-    public void execute(Session session, Message message) throws CommandException {
+    public void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException {
         message = (LoginMessage) message;
         login = ((LoginMessage) message).getLogin();
         pass = ((LoginMessage) message).getPass();
-        session.getUser().setLogin(login);
-        session.getUser().setPassword(pass);
+        //если пользователь не существует в базе данных, то добавляем его в нее
+        if(usc.getUser(login,pass) == null){
+            session.getUser().setLogin(login);
+            session.getUser().setPassword(pass);
+            usc.addUser(session.getUser());
+        } else{
+            session.getUser().setLogin(login);
+            session.getUser().setPassword(pass);
+        }
+
     }
 }

@@ -1,7 +1,6 @@
 package main.ServerPart.net;
 
-import main.ServerPart.net.commands.AllCommands;
-import main.ServerPart.net.commands.LoginCommand;
+import main.ServerPart.net.commands.*;
 import main.messages.Message;
 import main.messages.MessagesType;
 import main.myexceptions.CommandException;
@@ -43,6 +42,7 @@ public class Session implements ConnectionHandler {
     private OutputStream out;
 
     public Session(){
+        commands = new AllCommands();
     }
 
     @Override
@@ -62,7 +62,6 @@ public class Session implements ConnectionHandler {
 
     @Override
     public void close() {
-        // TODO: закрыть in/out каналы и сокет. Освободить другие ресурсы, если необходимо
         try {
             in.close();
             out.close();
@@ -92,6 +91,14 @@ public class Session implements ConnectionHandler {
             e.printStackTrace();
         }
         commands.addNewCommand(MessagesType.USER_LOGIN, new LoginCommand());
+        commands.addNewCommand(MessagesType.USER_INFO, new UserCommand());
+        commands.addNewCommand(MessagesType.USER_NAME, new NameCommand());
+        commands.addNewCommand(MessagesType.USER_PASS, new NewPassCommand());
+        commands.addNewCommand(MessagesType.CHAT_LIST, new ChatListCommand());
+        commands.addNewCommand(MessagesType.CHAT_CREATE, new ChatCreateCommand());
+        commands.addNewCommand(MessagesType.CHAT_HISTORY, new ChatHistoryCommand());
+        commands.addNewCommand(MessagesType.CHAT_FIND, new ChatFindCommand());
+        commands.addNewCommand(MessagesType.CHAT_SEND, new ChatSendCommand());
 
     }
 }
