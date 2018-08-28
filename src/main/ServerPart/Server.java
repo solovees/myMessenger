@@ -23,7 +23,7 @@ public class Server {
             ServerSocket serverSocket = new ServerSocket(3345);
             while (!serverSocket.isClosed()){
                 Socket client = serverSocket.accept();
-                executeIt.submit(new ServerThread(client, protocol ,new Session(client)));
+                executeIt.submit(new ServerThread(protocol ,new Session(client)));
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -42,6 +42,10 @@ public class Session implements ConnectionHandler {
     private InputStream in;
     private OutputStream out;
 
+    /**
+     * Конструткор
+     * @param socket - сокет
+     */
     public Session(Socket socket){
         commands = new AllCommands();
         this.socket = socket;
@@ -51,7 +55,7 @@ public class Session implements ConnectionHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        init();
     }
 
     @Override
@@ -81,8 +85,6 @@ public class Session implements ConnectionHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     /**
@@ -93,14 +95,18 @@ public class Session implements ConnectionHandler {
         return user;
     }
 
+    /**
+     * метод возвращает сокет
+     * @return
+     */
+    public Socket getSocket() {
+        return socket;
+    }
+
+    /**
+     * инициализирует команды
+     */
     private void init(){
-        try {
-            socket = new Socket(InetAddress.getLocalHost(), 80);
-            in = socket.getInputStream();
-            out = socket.getOutputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         commands.addNewCommand(MessagesType.USER_LOGIN, new LoginCommand());
         commands.addNewCommand(MessagesType.USER_INFO, new UserCommand());
         commands.addNewCommand(MessagesType.USER_NAME, new NameCommand());
@@ -110,6 +116,5 @@ public class Session implements ConnectionHandler {
         commands.addNewCommand(MessagesType.CHAT_HISTORY, new ChatHistoryCommand());
         commands.addNewCommand(MessagesType.CHAT_FIND, new ChatFindCommand());
         commands.addNewCommand(MessagesType.CHAT_SEND, new ChatSendCommand());
-
     }
 }

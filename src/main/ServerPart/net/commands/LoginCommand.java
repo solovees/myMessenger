@@ -7,7 +7,9 @@ import main.messages.LoginMessage;
 import main.messages.Message;
 import main.myexceptions.CommandException;
 
-
+/**
+ * Класс обработки команды регистрации/авторизации пользователя
+ */
 public class LoginCommand implements Command {
 
     /** логин*/
@@ -17,6 +19,7 @@ public class LoginCommand implements Command {
 
     @Override
     public void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException {
+        // получает лоигн и пароль из сообщения
         message = (LoginMessage) message;
         login = ((LoginMessage) message).getLogin();
         pass = ((LoginMessage) message).getPass();
@@ -29,6 +32,8 @@ public class LoginCommand implements Command {
             session.getUser().setLogin(login);
             session.getUser().setPassword(pass);
         }
+
+
 
     }
 }

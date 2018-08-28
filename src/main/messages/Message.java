@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author Егор Соловьев
  * @version 1.0
  */
-public class Message  implements Serializable{
+public class Message implements Serializable{
     /** Тип сообщения*/
     protected MessagesType messagesType;
 

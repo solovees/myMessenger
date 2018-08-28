@@ -2,37 +2,45 @@ package main.ServerPart;
 
 import main.ServerPart.net.Session;
 import main.messages.Message;
-import main.messages.MessagesType;
 import main.protocol.BinaryProtocol;
-
-import java.awt.*;
 import java.io.*;
 import java.net.Socket;
 import java.util.Arrays;
 
+/**
+ * Класс поток для выполнения сокетного соединения
+ * @author Егор Соловьев
+ */
 public class ServerThread extends Thread{
-    // сокет для соединения с клиентом
+    /** сокет для соединения с клиентом */
     private Socket socket;
-    // протокол передачи сообщений
+    /** протокол передачи сообщений */
     private BinaryProtocol binaryProtocol;
-    //
+    /** массив байт для сериализации сообщения */
     final byte[] buf;
+    /** сессия клиента*/
     private Session session;
+    /** поток ввода для чтения данных из сокета */
     private InputStream in;
 
-    public  ServerThread(Socket socket, BinaryProtocol protocol, Session session){
-        this.socket = socket;
+    /**
+     * конструктор
+     * @param protocol - протокол сериализации
+     * @param session - сессия
+     */
+    public  ServerThread( BinaryProtocol protocol, Session session){
+        this.socket = session.getSocket();
         this.binaryProtocol = protocol;
         this.session = session;
         this.buf = new byte[1024 * 64];
     }
+
     @Override
     public void run() {
         try {
-             in = socket.getInputStream();
-
+            in = socket.getInputStream();
+            // пока открыто сокетное соединения читает поток байт из потока ввода
             while (!socket.isClosed()){
-
                 int read = in.read(buf);
                 if (read > 0) {
                     // Читается поток байт, его нужно раскодировать с помощью протокола
@@ -44,7 +52,8 @@ public class ServerThread extends Thread{
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
+            // закрывает ресурсы
             session.close();
             try {
                 in.close();

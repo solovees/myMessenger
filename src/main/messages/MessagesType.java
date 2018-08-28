@@ -13,5 +13,6 @@ public enum MessagesType {
     CHAT_CREATE,    // команда /chat_create
     CHAT_HISTORY,   // команда /chat_history
     CHAT_FIND,      // команда /chat_find
-    CHAT_SEND       // команда /chat_send
+    CHAT_SEND,      // команда /chat_send
+    SERVER_USER     // сообщений от сервера вернуть User
 }
