@@ -96,7 +96,7 @@ public class MessageStoreClass implements MessageStore {
      */
     @Override
     public List<Long> getMessagesFromChat(Long chatId) {
-        String sql = "SELECT id FROM messages WHERE chat_id = " + chatId.toString();
+        String sql = "SELECT id FROM messenger.messages WHERE chat_id = " + chatId.toString();
         List<Long> result = new ArrayList<Long>();
         try {
             stmt = con.createStatement();

@@ -7,6 +7,7 @@ import main.ServerPart.net.Session;
 import main.messages.Message;
 import main.messages.MessagesType;
 import main.myexceptions.CommandException;
+import main.myexceptions.IllegalAcceptToUser;
 
 
 import java.sql.Connection;
@@ -45,7 +46,7 @@ public class AllCommands {
      * @param message - сообщение
      * @throws CommandException
      */
-    public void makeCommand(Session session, Message message) throws CommandException {
+    public void makeCommand(Session session, Message message) throws CommandException, IllegalAcceptToUser {
        Command command = map.get(message.getMessagesType());
        command.execute(session, message ,usc, msc);
     }

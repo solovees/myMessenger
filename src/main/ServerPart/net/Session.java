@@ -4,6 +4,7 @@ import main.ServerPart.net.commands.*;
 import main.messages.Message;
 import main.messages.MessagesType;
 import main.myexceptions.CommandException;
+import main.myexceptions.IllegalAcceptToUser;
 import main.myexceptions.ProtocolException;
 import main.protocol.BinaryProtocol;
 import main.protocol.Protocol;
@@ -41,14 +42,22 @@ public class Session implements ConnectionHandler {
     private InputStream in;
     private OutputStream out;
 
-    public Session(){
+    public Session(Socket socket){
         commands = new AllCommands();
+        this.socket = socket;
+        try {
+            in = socket.getInputStream();
+            out = socket.getOutputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
-    public void send(Message msg) throws ProtocolException, IOException {
+    public void send(Message msg) throws  IOException {
         Protocol protocol = new BinaryProtocol();
-        in.read(protocol.encode(msg));
+        out.write(protocol.encode(msg));
     }
 
     @Override
@@ -57,6 +66,8 @@ public class Session implements ConnectionHandler {
             commands.makeCommand(this, msg);
         } catch (CommandException e) {
             e.printStackTrace();
+        } catch (IllegalAcceptToUser illegalAcceptToUser) {
+            illegalAcceptToUser.printStackTrace();
         }
     }
 
