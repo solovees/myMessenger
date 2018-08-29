@@ -4,6 +4,8 @@ import main.ServerPart.net.Session;
 import main.chat.Chat;
 import main.messages.Message;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -17,7 +19,7 @@ public interface MessageStore {
      * @param userId - id пользователя
      * @return
      */
-    List<Long> getChatsByUserId(Long userId);
+    LinkedList<Long> getChatsByUserId(Long userId);
 
     /**
      * получить информацию о чате
@@ -31,17 +33,17 @@ public interface MessageStore {
      * @param chatId - id чата
      * @return
      */
-    List<Long> getMessagesFromChat(Long chatId);
+    LinkedList<Long> getMessagesFromChat(Long chatId);
 
     /**
      *  Получить информацию о сообщении
      * @param messageId  - id сообщения
      * @return
      */
-    Message getMessageById(Long messageId);
+    String getMessageById(Long messageId);
 
     /**
-     *  Добавить сообщение в чат
+     * Добавить сообщение в чат
      * @param chatId - id  чата
      * @param message - сообщение
      * @param userId - id  пользователя
@@ -56,9 +58,9 @@ public interface MessageStore {
     void addUserToChat(Long userId, Long chatId);
 
     /**
-     * добавляем чат для пользователя
+     * добавляем чат для пользователя и возвращает его id
      * @param userId - id пользователя
      */
-    void addChat(Long userId);
+     Long addChat(Long userId);
 
 }

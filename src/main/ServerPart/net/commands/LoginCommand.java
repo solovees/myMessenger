@@ -5,7 +5,11 @@ import main.ServerPart.Store.UserStoreClass;
 import main.ServerPart.net.Session;
 import main.messages.LoginMessage;
 import main.messages.Message;
+import main.messages.MessagesType;
+import main.messages.ServerUserMessage;
 import main.myexceptions.CommandException;
+
+import java.io.IOException;
 
 /**
  * Класс обработки команды регистрации/авторизации пользователя
@@ -16,6 +20,7 @@ public class LoginCommand implements Command {
     private String login;
     /** пароль*/
     private String pass;
+
 
     @Override
     public void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException {
@@ -31,6 +36,14 @@ public class LoginCommand implements Command {
         } else{
             session.getUser().setLogin(login);
             session.getUser().setPassword(pass);
+        }
+        ServerUserMessage serverMessage = new ServerUserMessage(MessagesType.SERVER_USER);
+        serverMessage.setUser(session.getUser());
+        try {
+            session.send(serverMessage);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new CommandException("Ошибка в команде LoginCommand");
         }
 
 

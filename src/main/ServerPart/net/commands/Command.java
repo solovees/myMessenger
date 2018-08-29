@@ -24,5 +24,5 @@ public interface Command {
      * @param msc -  класс взаимодействия с бд для сообщений
      * @throws CommandException - все исключения перебрасываются как CommandException
      */
-    void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException, IllegalAcceptToUser;
+    void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException;
 }

@@ -44,6 +44,14 @@ public class Chat {
     }
 
     /**
+     * метод устанавливает сообщения из чата
+     * @param messages
+     */
+    public void setMessages(LinkedList<Long> messages) {
+        this.messages = messages;
+    }
+
+    /**
      * метод добавляет участника в чат
      * @param p - id участника
      * @throws ParticipantMyException

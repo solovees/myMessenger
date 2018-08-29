@@ -5,8 +5,6 @@ package main.messages;
  * @author Егор Соловьев
  */
 public class LoginMessage extends Message {
-    /** логин*/
-    private String login;
     /** пароль*/
     private String pass;
 
@@ -19,27 +17,11 @@ public class LoginMessage extends Message {
     }
 
     /**
-     * метод возвращает логин
-     * @return
-     */
-    public String getLogin() {
-        return login;
-    }
-
-    /**
      * метод возвращает пароль
      * @return
      */
     public String getPass() {
         return pass;
-    }
-
-    /**
-     * метод устанавливает логин
-     * @param login - логин
-     */
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     /**

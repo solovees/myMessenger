@@ -11,13 +11,15 @@ public class ServerStringMessage extends Message {
     /**
      * конструктор
      * @param type - тип сообщения
+     * @param text - сообщение
      */
-    public ServerStringMessage(MessagesType type) {
+    public ServerStringMessage(MessagesType type, String text) {
         super(type);
+        this.text = text;
     }
 
     /**
-     * метод возвращает текст сообщения 
+     * метод возвращает текст сообщения
      * @return
      */
     public String getText() {

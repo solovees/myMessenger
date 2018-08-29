@@ -96,6 +96,14 @@ public class Session implements ConnectionHandler {
     }
 
     /**
+     * метод для установки пользователя
+     * @param user - пользователь
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
      * метод возвращает сокет
      * @return
      */

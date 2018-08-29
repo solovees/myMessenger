@@ -40,4 +40,11 @@ public interface UserStore {
      */
     User getUserById(Long id);
 
+    /**
+     * Получить пользователя по login
+     * return null if user not found
+     * @param login - логин пользователя
+     * @return
+     */
+    User getUserByLogin(String login);
 }

@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -39,9 +40,9 @@ public class MessageStoreClass implements MessageStore {
      * @return
      */
     @Override
-    public List<Long> getChatsByUserId(Long userId) {
-        String sql = "SELECT chat_id FROM chats WHERE user_id = " + userId.toString();
-        List<Long> result = new ArrayList<Long>();
+    public LinkedList<Long> getChatsByUserId(Long userId) {
+        String sql = "SELECT chat_id FROM messager.chats WHERE user_id = " + userId.toString();
+        LinkedList<Long> result = new LinkedList<Long>();
         try {
             stmt = con.createStatement();
             res = stmt.executeQuery(sql);
@@ -69,7 +70,7 @@ public class MessageStoreClass implements MessageStore {
      */
     @Override
     public Chat getChatById(Long chatId) {
-        String sql = "SELECT * FROM chat WHERE chat_id = " + chatId.toString();
+        String sql = "SELECT * FROM messager.chat WHERE chat_id = " + chatId.toString();
         Chat chat ;
         try {
             stmt = con.createStatement();
@@ -95,9 +96,9 @@ public class MessageStoreClass implements MessageStore {
      * @return
      */
     @Override
-    public List<Long> getMessagesFromChat(Long chatId) {
+    public LinkedList<Long> getMessagesFromChat(Long chatId) {
         String sql = "SELECT id FROM messenger.messages WHERE chat_id = " + chatId.toString();
-        List<Long> result = new ArrayList<Long>();
+        LinkedList<Long> result = new LinkedList<Long>();
         try {
             stmt = con.createStatement();
             res = stmt.executeQuery(sql);
@@ -124,8 +125,29 @@ public class MessageStoreClass implements MessageStore {
      * @return
      */
     @Override
-    public Message getMessageById(Long messageId) {
-        return null;
+    public String getMessageById(Long messageId) {
+        String sql = "SELECT " +
+                "m.content as content," +
+                "u.login as login" +
+                "FROM messenger.messages m" +
+                "INNER JOIN messenger.user u on m.user_id = u.id" +
+                "WHERE m.id =" + messageId.toString() ;
+        try {
+            stmt = con.createStatement();
+            res = stmt.executeQuery(sql);
+            String resalt = res.getString("login") + ": " + res.getString("content");
+            return resalt;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                stmt.close();
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     /**
@@ -137,7 +159,7 @@ public class MessageStoreClass implements MessageStore {
     @Override
     public void addMessage(Long chatId, Message message, Long userId) {
         message = (ChatSendMessage) message;
-        String sql = "INSERT INTO messages(content, user_id, chat_id) VALUES ('" + ((ChatSendMessage) message).getContent() +
+        String sql = "INSERT INTO messager.messages(content, user_id, chat_id) VALUES ('" + ((ChatSendMessage) message).getContent() +
                 "', " + chatId.toString() + ", " + userId.toString() + ")";
         try {
             stmt = con.createStatement();
@@ -169,6 +191,12 @@ public class MessageStoreClass implements MessageStore {
             int n = stmt.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -177,14 +205,27 @@ public class MessageStoreClass implements MessageStore {
      * @param userId - id пользователя
      */
     @Override
-    public void addChat(Long userId) {
-        String sql = "UPDATE INTO messenger.chats (admin) VALUES(" + userId.toString() + ")";
+    public Long addChat(Long userId) {
+        String sql = "INSERT INTO messenger.chat (admin) VALUES(" + userId.toString() + ")";
+        String sql2 = "SELECT * FROM messenger.chat WHERE id = LAST_INSERT_ID()";
         try {
             stmt = con.createStatement();
-            int n = stmt.executeUpdate(sql);
+            stmt.executeUpdate(sql);
+            res = stmt.executeQuery(sql2);
+            return res.getLong("id");
         } catch (SQLException e) {
             e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                stmt.close();
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
         }
+
     }
 
 

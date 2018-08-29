@@ -11,6 +11,9 @@ public class Message implements Serializable{
     /** Тип сообщения*/
     protected MessagesType messagesType;
 
+    /** логин*/
+    private String login;
+
     /**
      * конструктор
      * @param type - тип сообщения
@@ -26,4 +29,21 @@ public class Message implements Serializable{
     public MessagesType getMessagesType() {
         return messagesType;
     }
+
+    /**
+     * метод возвращает логин
+     * @return
+     */
+    public String getLogin() {
+        return login;
+    }
+
+    /**
+     * метод устанавливает логин
+     * @param login - логин
+     */
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
 }
