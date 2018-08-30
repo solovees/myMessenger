@@ -43,6 +43,11 @@ public class ChatFindCommand implements Command {
         }
     }
 
+    /**
+     * метод проверяет вхождение подстроки в строку
+     * @param s - строка
+     * @return
+     */
     private boolean checkSubstring(String s){
         Pattern pat;
         Matcher mat;

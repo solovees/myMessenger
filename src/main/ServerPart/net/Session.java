@@ -1,11 +1,11 @@
 package main.ServerPart.net;
 
+import main.ConnectionHandler;
 import main.ServerPart.net.commands.*;
 import main.messages.Message;
 import main.messages.MessagesType;
 import main.myexceptions.CommandException;
 import main.myexceptions.IllegalAcceptToUser;
-import main.myexceptions.ProtocolException;
 import main.protocol.BinaryProtocol;
 import main.protocol.Protocol;
 import main.user.User;
@@ -14,7 +14,6 @@ import main.user.User;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetAddress;
 import java.net.Socket;
 
 /**

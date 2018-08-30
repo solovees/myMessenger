@@ -1,4 +1,4 @@
-package main.ServerPart.net;
+package main;
 
 import main.messages.Message;
 import main.myexceptions.ProtocolException;

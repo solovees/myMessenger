@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad">
-        <schema name="messenger" object-types="column, constraint, function, index, procedure, table, dataset trigger, view" />
+        <schema name="messenger" object-types="table" />
       </connection>
     </loaded-nodes>
   </component>
