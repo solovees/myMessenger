@@ -115,7 +115,7 @@ public class ClientHandler implements ConnectionHandler {
      * @throws IOException
      */
     public void initSocket(String host, int port) throws IOException {
-        Socket socket = new Socket(host, port);
+         this.socket = new Socket(host, port);
         in = socket.getInputStream();
         out = socket.getOutputStream();
 
@@ -142,20 +142,23 @@ public class ClientHandler implements ConnectionHandler {
         socketThread.start();
     }
 
+    public Socket getSocket() {
+        return socket;
+    }
 
     /**
      * Обрабатывает входящую строку, полученную с консоли
      */
     public void processInput(String line) throws IOException, ProtocolException {
-        switch (line) {
+        String[] tokens = line.split(" ");
+        String cmdCommand = tokens[0];
+        ICommand command = null;
+        switch (cmdCommand) {
             case "/login":
-
+                command = new CommandLogin();
                 break;
             case "/help":
-
-                break;
-            case "/text":
-
+                command = new CommandHelp();
                 break;
             case "/user":
 
@@ -184,7 +187,9 @@ public class ClientHandler implements ConnectionHandler {
             default:
                 System.out.print("Не верная команда, обратитесь на помощью /help");
         }
+        command.execute(tokens);
     }
+
 
     @Override
     public void send(Message msg) throws  IOException {
@@ -213,13 +218,12 @@ public class ClientHandler implements ConnectionHandler {
     public static void main(String[] args) throws Exception {
 
         ClientHandler client = new ClientHandler();
-        client.initSocket("localhost", 3345);
-
+        client.initSocket("127.0.0.1", 3345);
         System.out.println("Client connected to socket");
         DataOutputStream oos = new DataOutputStream(client.getOut());
         DataInputStream ois = new DataInputStream(client.getIn());
         Scanner scanner = new Scanner(System.in);
-        while (!client.socket.isClosed()){
+        while (!client.getSocket().isClosed()){
             System.out.println("Введите сообщение: ");
             String line = scanner.nextLine();
             client.processInput(line);

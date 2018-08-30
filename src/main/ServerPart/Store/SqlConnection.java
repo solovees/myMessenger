@@ -3,6 +3,7 @@ package main.ServerPart.Store;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import com.mysql.jdbc.Driver;
 
 /**
  * класс для создания подключения к базе данных MySql
@@ -11,11 +12,11 @@ import java.sql.SQLException;
 public class SqlConnection {
 
     /** url подключения к бд*/
-    private static final String URL = "jdbc:mysql://localhost:3306/messenger";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3310/messenger?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     /** имя пользователя*/
-    private static final String USER_NAME = "root";
+    private static final String USERNAME = "root";
     /** пароль пользователя*/
-    private static  String PASSWORD = "root";
+    private static final String PASSWORD = "root";
     /** объект подключения к бд */
     private static Connection con = null;
 
@@ -26,15 +27,22 @@ public class SqlConnection {
     public static Connection getConnection(){
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
             if(con == null){
-                con = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
+                con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             }
             return con;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return null;
         } catch (SQLException e) {
+            System.err.print("Не удалось загрузить класс драйвера");
             e.printStackTrace();
             return null;
         } finally {
