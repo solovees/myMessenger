@@ -18,6 +18,7 @@ public enum MessagesType {
     SERVER_STRING,  // сообщение от сервера текстовое
     SERVER_HISTORY, // сообщение от сервера с историей чата
     SERVER_CHAT_IDS,// сообщение от сервера с списком чатов
-    TEXT_MESS       // сообщение из чата
+    TEXT_MESS,      // сообщение из чата
+    USER_SIGN_IN    // команда /sign_in
 
 }

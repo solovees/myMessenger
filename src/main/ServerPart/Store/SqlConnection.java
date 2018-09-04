@@ -45,14 +45,6 @@ public class SqlConnection {
             System.err.print("Не удалось загрузить класс драйвера");
             e.printStackTrace();
             return null;
-        } finally {
-            if( con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 

@@ -5,6 +5,7 @@ import main.messages.Message;
 import main.myexceptions.ProtocolException;
 import main.protocol.BinaryProtocol;
 import main.protocol.Protocol;
+import main.user.User;
 
 import java.io.*;
 import java.net.Socket;
@@ -20,7 +21,7 @@ public class ClientHandler implements ConnectionHandler {
     /**
      * Пользователь сессии
      */
-    private String login;
+    private static User user = null;
 
     /**
      * сокет на клиента
@@ -111,13 +112,29 @@ public class ClientHandler implements ConnectionHandler {
     }
 
     /**
+     * метод устанавливает пользователя
+     * @param user - пользователь
+     */
+    public static void setUser(User user) {
+        ClientHandler.user = user;
+    }
+
+    /**
+     * метод возвращает пользователя
+     * @return
+     */
+    public static User getUser() {
+        return user;
+    }
+
+    /**
      * метод инициализирует сокет
      * @throws IOException
      */
     public void initSocket(String host, int port) throws IOException {
-         this.socket = new Socket(host, port);
-        in = socket.getInputStream();
-        out = socket.getOutputStream();
+        this.socket = new Socket(host, port);
+        this.in = socket.getInputStream();
+        this.out = socket.getOutputStream();
 
         /**
          * Инициализируем поток-слушатель. Синтаксис лямбды скрывает создание анонимного класса Runnable
@@ -153,41 +170,65 @@ public class ClientHandler implements ConnectionHandler {
         String[] tokens = line.split(" ");
         String cmdCommand = tokens[0];
         ICommand command = null;
+        Message message = null;
         switch (cmdCommand) {
+            case "/sign_in":
+                command = new CommandSignIn();
+                message = command.execute(tokens);
+                send(message);
+                break;
             case "/login":
                 command = new CommandLogin();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/help":
                 command = new CommandHelp();
+                command.execute(tokens);
                 break;
             case "/user":
-
+                command = new CommandUser();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/user_info":
-
+                command = new CommandUserInfo();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/user_pass":
-
+                command = new CommandPass();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/chat_list":
-
+                command = new CommandChatList();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/chat_create":
-
+                command = new CommandChatCreate();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/chat_history":
-
+                command = new CommandChatHistory();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/chat_find":
-
+                command = new CommandChatFind();
+                message = command.execute(tokens);
+                send(message);
                 break;
             case "/chat_send":
-
+                command = new CommandSend();
+                message = command.execute(tokens);
+                send(message);
                 break;
             default:
                 System.out.print("Не верная команда, обратитесь на помощью /help");
         }
-        command.execute(tokens);
     }
 
 
@@ -224,7 +265,7 @@ public class ClientHandler implements ConnectionHandler {
         DataInputStream ois = new DataInputStream(client.getIn());
         Scanner scanner = new Scanner(System.in);
         while (!client.getSocket().isClosed()){
-            System.out.println("Введите сообщение: ");
+            System.out.println("\nВведите сообщение: ");
             String line = scanner.nextLine();
             client.processInput(line);
         }

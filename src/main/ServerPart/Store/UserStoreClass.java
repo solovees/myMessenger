@@ -37,20 +37,18 @@ public class UserStoreClass implements UserStore {
      */
     @Override
     public User addUser(User user) {
-        String sql = "INSERT INTO messenger.user (id, login, password, name) VALUES" +
-                "(" + user.getId().toString() + "," + user.getLogin().toString() +
-                " ," + user.getPassword().toString() + ", " + user.getName().toString();
+        String sql = "INSERT INTO messenger.user(login, password) VALUES('" +
+                user.getLogin().toString() +"','" +
+                user.getPassword().toString() + "')";
         try {
             stmt = con.createStatement();
-            int n = stmt.executeUpdate(sql);
-            res = stmt.executeQuery(sql);
+            stmt.executeUpdate(sql);
             return user;
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         } finally {
             try {
-                res.close();
                 stmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -97,13 +95,14 @@ public class UserStoreClass implements UserStore {
      */
     @Override
     public User getUser(String login, String pass) {
-        String sql = "SELECT * FROM messenger.user where login =" +
-                login + "and password = " + pass;
+        String sql = "SELECT * FROM messenger.user where login = '" +
+                login + "' and password = '" + pass + "'";
         try {
             stmt = con.createStatement();
             res = stmt.executeQuery(sql);
             if(res.next()) {
-                User user = new User(res.getLong("id"), res.getString("login"), res.getString("password"));
+                User user = new User( res.getString("login"), res.getString("password"));
+                user.setId(res.getLong("id"));
                 user.setName(res.getString("name"));
                 return user;
             }
@@ -138,7 +137,8 @@ public class UserStoreClass implements UserStore {
             stmt = con.createStatement();
             res = stmt.executeQuery(sql);
             if(res.next()) {
-                User user = new User(id, res.getString("login"), res.getString("password"));
+                User user = new User(res.getString("login"), res.getString("password"));
+                user.setId(id);
                 user.setName(res.getString("name"));
                 return user;
             }
@@ -167,7 +167,8 @@ public class UserStoreClass implements UserStore {
             stmt = con.createStatement();
             res = stmt.executeQuery(sql);
             if(res.next()) {
-                User user = new User(res.getLong("id"), res.getString("login"), res.getString("password"));
+                User user = new User(res.getString("login"), res.getString("password"));
+                user.setId(res.getLong("id"));
                 user.setName(res.getString("name"));
                 return user;
             }

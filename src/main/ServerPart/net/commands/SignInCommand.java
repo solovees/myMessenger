@@ -3,26 +3,18 @@ package main.ServerPart.net.commands;
 import main.ServerPart.Store.MessageStoreClass;
 import main.ServerPart.Store.UserStoreClass;
 import main.ServerPart.net.Session;
-import main.messages.LoginMessage;
-import main.messages.Message;
-import main.messages.MessagesType;
-import main.messages.ServerUserMessage;
+import main.messages.*;
 import main.myexceptions.AuthorizationException;
 import main.myexceptions.CommandException;
 import main.user.User;
 
 import java.io.IOException;
 
-/**
- * Класс обработки команды регистрации/авторизации пользователя
- */
-public class LoginCommand implements Command {
-
+public class SignInCommand implements Command {
     /** логин*/
     private String login;
     /** пароль*/
     private String pass;
-
 
     @Override
     public void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException {
@@ -30,18 +22,11 @@ public class LoginCommand implements Command {
         message = (LoginMessage) message;
         login = ((LoginMessage) message).getLogin();
         pass = ((LoginMessage) message).getPass();
-        //если пользователь не существует в базе данных, то добавляем его в нее
         User user = null;
-        try {
-            user = new User(login, pass);
-        } catch (AuthorizationException e) {
-            e.printStackTrace();
-        }
-        User userNew = usc.addUser(user);
-            System.out.print(userNew);
-        if(userNew != null){
-            ServerUserMessage serverMessage = new ServerUserMessage(MessagesType.SERVER_USER);
-            serverMessage.setUser(userNew);
+        user = usc.getUser(login,pass);
+        ServerUserMessage serverMessage = new ServerUserMessage(MessagesType.SERVER_USER);
+        if (user != null){
+            serverMessage.setUser(user);
             try {
                 session.send(serverMessage);
             } catch (IOException e) {
@@ -49,9 +34,6 @@ public class LoginCommand implements Command {
                 throw new CommandException("Ошибка в команде LoginCommand");
             }
         }
-
-
-
 
     }
 }

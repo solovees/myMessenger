@@ -25,7 +25,7 @@ public class ChatListCommand implements Command {
     @Override
     public void execute(Session session, Message message, UserStoreClass usc, MessageStoreClass msc) throws CommandException {
         message = (ChatListMessage) message;
-        session.setUser(usc.getUserById(((ChatListMessage) message).getUserId()));
+        session.setUser(usc.getUserByLogin(((ChatListMessage) message).getLogin()));
 
         ids = msc.getChatsByUserId(session.getUser().getId());
         serverMsg = new ServerChatsIdMessege(MessagesType.SERVER_CHAT_IDS);

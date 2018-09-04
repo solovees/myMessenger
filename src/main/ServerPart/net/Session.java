@@ -66,6 +66,7 @@ public class Session implements ConnectionHandler {
     @Override
     public void onMessage(Message msg)  {
         try {
+            System.out.print(msg.getLogin());
             commands.makeCommand(this, msg);
         } catch (CommandException e) {
             e.printStackTrace();
@@ -123,5 +124,6 @@ public class Session implements ConnectionHandler {
         commands.addNewCommand(MessagesType.CHAT_HISTORY, new ChatHistoryCommand());
         commands.addNewCommand(MessagesType.CHAT_FIND, new ChatFindCommand());
         commands.addNewCommand(MessagesType.CHAT_SEND, new ChatSendCommand());
+        commands.addNewCommand(MessagesType.USER_SIGN_IN, new SignInCommand());
     }
 }

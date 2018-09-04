@@ -24,23 +24,21 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad">
+      <connection connection-id="563d3d6e-c16a-4a70-9332-cc2ba86cae23">
         <schema name="messenger" object-types="table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad">
+    <connection id="563d3d6e-c16a-4a70-9332-cc2ba86cae23">
       <console name="Connection" type="STANDARD" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad" />
+    <connection id="563d3d6e-c16a-4a70-9332-cc2ba86cae23" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-list connection-id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad" dataset="messenger.user" active-filter-id="" />
-    <filter-list connection-id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad" dataset="messenger.chats" active-filter-id="" />
-    <filter-list connection-id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad" dataset="messenger.chat" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="563d3d6e-c16a-4a70-9332-cc2ba86cae23" dataset="messenger.user" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -65,7 +63,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="e2265f5e-aa75-49ac-b7e8-e2f670e439ad" active="true">
+      <connection id="563d3d6e-c16a-4a70-9332-cc2ba86cae23" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -76,8 +74,8 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="localhost" />
-          <port value="3306" />
+          <host value="127.0.0.1" />
+          <port value="3310" />
           <database value="messenger" />
           <os-authentication value="false" />
           <empty-password value="false" />

@@ -28,8 +28,8 @@ public class AllCommands {
      */
     public AllCommands(){
         con = SqlConnection.getConnection();
-        usc = new UserStoreClass(con);
-        msc = new MessageStoreClass(con);
+        //usc = new UserStoreClass(con);
+       // msc = new MessageStoreClass(con);
     }
     /**
      * метод добавляет сообщение и соответствующую ей команду
@@ -48,6 +48,6 @@ public class AllCommands {
      */
     public void makeCommand(Session session, Message message) throws CommandException, IllegalAcceptToUser {
        Command command = map.get(message.getMessagesType());
-       command.execute(session, message ,usc, msc);
+       command.execute(session, message ,new UserStoreClass(con), new MessageStoreClass(con));
     }
 }
