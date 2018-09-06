@@ -1,7 +1,10 @@
 package main.ClientPart;
 
+import main.ClientPart.ClientCommands.*;
+import main.ClientPart.CommandsFromServer.*;
 import main.ConnectionHandler;
 import main.messages.Message;
+import main.messages.MessagesType;
 import main.myexceptions.ProtocolException;
 import main.protocol.BinaryProtocol;
 import main.protocol.Protocol;
@@ -11,6 +14,9 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.Scanner;
+
+import static main.messages.MessagesType.SERVER_CHAT_IDS;
+import static main.messages.MessagesType.TEXT_MESS;
 
 /**
  * Клиент для тестирования серверного приложения
@@ -132,9 +138,10 @@ public class ClientHandler implements ConnectionHandler {
      * @throws IOException
      */
     public void initSocket(String host, int port) throws IOException {
-        this.socket = new Socket(host, port);
+        Socket socket = new Socket(host, port);
         this.in = socket.getInputStream();
         this.out = socket.getOutputStream();
+        setProtocol(new BinaryProtocol());
 
         /**
          * Инициализируем поток-слушатель. Синтаксис лямбды скрывает создание анонимного класса Runnable
@@ -228,6 +235,7 @@ public class ClientHandler implements ConnectionHandler {
                 break;
             default:
                 System.out.print("Не верная команда, обратитесь на помощью /help");
+                break;
         }
     }
 
@@ -241,7 +249,23 @@ public class ClientHandler implements ConnectionHandler {
 
     @Override
     public void onMessage(Message msg)  {
-
+        MessagesType type = msg.getMessagesType();
+        ICommandServer commandServer = null;
+        switch (type){
+            case SERVER_USER:           // сообщений от сервера вернуть User
+                commandServer = new CommandServerUser();
+                break;
+            case SERVER_STRING:         // сообщение от сервера текстовое
+                commandServer = new CommandString();
+                break;
+            case SERVER_CHAT_IDS:       // сообщение от сервера с списком чатов
+                commandServer = new CommandChatIds();
+                break;
+            case TEXT_MESS:
+                commandServer = new CommandText();
+                break;
+        }
+        commandServer.execute(msg);
     }
 
     @Override
@@ -264,10 +288,13 @@ public class ClientHandler implements ConnectionHandler {
         DataOutputStream oos = new DataOutputStream(client.getOut());
         DataInputStream ois = new DataInputStream(client.getIn());
         Scanner scanner = new Scanner(System.in);
-        while (!client.getSocket().isClosed()){
-            System.out.println("\nВведите сообщение: ");
-            String line = scanner.nextLine();
+        String line = "";
+        System.out.println("\nДля выхода нажмите q + enter. Для получения списка команд /help");
+        while (!line.equals("q")){
+            System.out.println();
+            line = scanner.nextLine();
             client.processInput(line);
+
         }
     }
 }

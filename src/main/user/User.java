@@ -2,6 +2,7 @@ package main.user;
 
 import main.myexceptions.AuthorizationException;
 
+import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,7 +11,7 @@ import java.util.regex.Pattern;
  * @author Егор Соловьев
  * @version 1.0
  */
-public class User {
+public class User implements Serializable{
     /** id пользователя*/
     private long id;
     /** Логин пользоваетля*/
@@ -26,7 +27,7 @@ public class User {
      * @param password - пароль
      * @throws  AuthorizationException
      */
-    public  User( String login, String password) throws AuthorizationException {
+    public  User(String login, String password) throws AuthorizationException {
         if(!checkLogin(login) || !(checkPassword(password)))
             throw new AuthorizationException("Ошибка при создании пользователя");
         this.login = login;

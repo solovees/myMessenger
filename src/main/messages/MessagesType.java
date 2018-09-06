@@ -16,7 +16,6 @@ public enum MessagesType {
     CHAT_SEND,      // команда /chat_send
     SERVER_USER,    // сообщений от сервера вернуть User
     SERVER_STRING,  // сообщение от сервера текстовое
-    SERVER_HISTORY, // сообщение от сервера с историей чата
     SERVER_CHAT_IDS,// сообщение от сервера с списком чатов
     TEXT_MESS,      // сообщение из чата
     USER_SIGN_IN    // команда /sign_in

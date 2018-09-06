@@ -2,11 +2,13 @@ package main.messages;
 
 import main.user.User;
 
+import java.io.Serializable;
+
 /**
  * Класс для передачи пользователя клиенту со стороны сервера
  * @author Егор Соловьев
  */
-public class ServerUserMessage extends Message {
+public class ServerUserMessage extends Message implements Serializable{
 
     /** Пользоваетль */
     private User user;

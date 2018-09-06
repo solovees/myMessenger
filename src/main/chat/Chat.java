@@ -4,6 +4,7 @@ import main.myexceptions.MessageMyException;
 import main.myexceptions.ParticipantMyException;
 import main.user.User;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -11,7 +12,7 @@ import java.util.LinkedList;
  * @author Егор Соловье
  * @version 1.0
  */
-public class Chat {
+public class Chat implements Serializable{
 
     /**id чата */
     private Long id;
