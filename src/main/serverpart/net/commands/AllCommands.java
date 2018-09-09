@@ -48,6 +48,6 @@ public class AllCommands {
      */
     public void makeCommand(Session session, Message message) throws CommandException, IllegalAcceptToUser {
        Command command = map.get(message.getMessagesType());
-       command.execute(session, message ,new UserStoreClass(con), new MessageStoreClass(con));
+       command.execute(session, message, new UserStoreClass(con), new MessageStoreClass(con));
     }
 }

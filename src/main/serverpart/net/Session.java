@@ -1,11 +1,8 @@
 package main.serverpart.net;
 
 import main.ConnectionHandler;
-import main.serverpart.net.commands.*;
+import main.blockingqueue.*;
 import main.messages.Message;
-import main.messages.MessagesType;
-import main.myexceptions.CommandException;
-import main.myexceptions.IllegalAcceptToUser;
 import main.protocol.BinaryProtocol;
 import main.protocol.Protocol;
 import main.user.User;
@@ -32,8 +29,7 @@ public class Session implements ConnectionHandler {
     // сокет на клиента
     private Socket socket;
 
-    // объект для хранения всех команд
-    private AllCommands commands;
+
 
     /**
      * С каждым сокетом связано 2 канала in/out
@@ -41,20 +37,23 @@ public class Session implements ConnectionHandler {
     private InputStream in;
     private OutputStream out;
 
+    private MessageBlockingQueue bk;
+
     /**
      * Конструткор
      * @param socket - сокет
      */
-    public Session(Socket socket){
-        commands = new AllCommands();
+    public Session(Socket socket, MessageBlockingQueue bk){
+        //commands = new AllCommands();
         this.socket = socket;
+        this.bk = bk;
         try {
             in = socket.getInputStream();
             out = socket.getOutputStream();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        init();
+
     }
 
     @Override
@@ -65,14 +64,8 @@ public class Session implements ConnectionHandler {
 
     @Override
     public void onMessage(Message msg)  {
-        try {
-            System.out.print(msg.getLogin() + " - логин пользователя\n");
-            commands.makeCommand(this, msg);
-        } catch (CommandException e) {
-            e.printStackTrace();
-        } catch (IllegalAcceptToUser illegalAcceptToUser) {
-            illegalAcceptToUser.printStackTrace();
-        }
+        System.out.print(msg.getLogin() + " - логин пользователя\n");
+        bk.set(msg, this);
     }
 
     @Override
@@ -81,7 +74,6 @@ public class Session implements ConnectionHandler {
             in.close();
             out.close();
             socket.close();
-            commands = null;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -111,19 +103,5 @@ public class Session implements ConnectionHandler {
         return socket;
     }
 
-    /**
-     * инициализирует команды
-     */
-    private void init(){
-        commands.addNewCommand(MessagesType.USER_LOGIN, new LoginCommand());
-        commands.addNewCommand(MessagesType.USER_INFO, new UserCommand());
-        commands.addNewCommand(MessagesType.USER_NAME, new NameCommand());
-        commands.addNewCommand(MessagesType.USER_PASS, new NewPassCommand());
-        commands.addNewCommand(MessagesType.CHAT_LIST, new ChatListCommand());
-        commands.addNewCommand(MessagesType.CHAT_CREATE, new ChatCreateCommand());
-        commands.addNewCommand(MessagesType.CHAT_HISTORY, new ChatHistoryCommand());
-        commands.addNewCommand(MessagesType.CHAT_FIND, new ChatFindCommand());
-        commands.addNewCommand(MessagesType.CHAT_SEND, new ChatSendCommand());
-        commands.addNewCommand(MessagesType.USER_SIGN_IN, new SignInCommand());
-    }
+
 }

@@ -28,7 +28,7 @@ public class ServerThread extends Thread{
      * @param protocol - протокол сериализации
      * @param session - сессия
      */
-    public  ServerThread( BinaryProtocol protocol, Session session){
+    public ServerThread(BinaryProtocol protocol, Session session){
         this.socket = session.getSocket();
         this.binaryProtocol = protocol;
         this.session = session;
@@ -65,4 +65,5 @@ public class ServerThread extends Thread{
         }
 
     }
+
 }

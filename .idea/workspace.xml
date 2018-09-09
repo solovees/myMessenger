@@ -2,105 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc9d7424-470f-40e3-898b-f9cbad01021c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandChatCreate.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandChatFind.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandChatHistory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandChatList.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandHelp.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandLogin.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandPass.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandSend.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandSignIn.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandUser.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/CommandUserInfo.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientCommands/ICommand.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientHandler$1.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandsFromServer/CommandChatIds.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandsFromServer/CommandServerUser.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandsFromServer/CommandString.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandsFromServer/CommandText.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandsFromServer/ICommandServer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/serverpart/net/commands/SignInCommand.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandChatIds.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandServerUser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandString.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandText.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/ICommandServer.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/blockingqueue/MessageBlockingQueue.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/blockingqueue/ServerConsumer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/blockingqueue/SessionMessageStore.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientHandler.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ClientHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandHelp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/CommandLogin.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ClientPart/ICommand.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Server.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Server.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/ServerThread.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/ServerThread.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/MessageStore.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/MessageStore.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/MessageStoreClass.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/MessageStoreClass.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/SqlConnection.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/SqlConnection.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/UserStore.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/UserStore.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/UserStoreClass.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/UserStoreClass.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/UserStoreClassTest.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/Store/UserStoreClassTest.class" />
       <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/Session.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/Session.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/AllCommands.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/AllCommands.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatCreateCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatCreateCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatFindCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatFindCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatHistoryCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatHistoryCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatListCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatListCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatSendCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/ChatSendCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/Command.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/Command.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/LoginCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/LoginCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/NameCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/NameCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/NewPassCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/NewPassCommand.class" />
       <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/UserCommand.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/ServerPart/net/commands/UserCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/chat/Chat.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/chat/Chat.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/messages/ChatListMessage.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/messages/ChatListMessage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/messages/MessagesType.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/messages/MessagesType.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/messages/NameMessage.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/messages/NameMessage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/messages/ServerChatHistoryMessage.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/messages/ServerUserMessage.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/messages/ServerUserMessage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/messages/TextMessage.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/messages/ServerTextMessage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppCommon/main/user/User.class" afterPath="$PROJECT_DIR$/out/production/AppCommon/main/user/User.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/ClientHandler.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandChatCreate.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatCreate.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandChatFind.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatFind.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandChatHistory.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatHistory.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandChatList.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandHelp.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandHelp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandLogin.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandLogin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandPass.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandPass.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandSend.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandSend.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandSignIn.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandSignIn.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandUser.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/CommandUserInfo.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandUserInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClientPart/ICommand.java" afterPath="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/ICommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Server.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Server.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/ServerThread.java" afterPath="$PROJECT_DIR$/src/main/serverpart/ServerThread.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Store/MessageStore.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Store/MessageStore.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Store/MessageStoreClass.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Store/MessageStoreClass.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Store/SqlConnection.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Store/SqlConnection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Store/UserStore.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Store/UserStore.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Store/UserStoreClass.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Store/UserStoreClass.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/Store/UserStoreClassTest.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Store/UserStoreClassTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/Session.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/Session.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/AllCommands.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/ChatCreateCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatCreateCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/ChatFindCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatFindCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/ChatHistoryCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatHistoryCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/ChatListCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatListCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/ChatSendCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatSendCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/Command.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/Command.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/LoginCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/LoginCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/NameCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/NameCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/NewPassCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/NewPassCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/SignInCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/SignInCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/ServerPart/net/commands/UserCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/UserCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/chat/Chat.java" afterPath="$PROJECT_DIR$/src/main/chat/Chat.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/messages/MessagesType.java" afterPath="$PROJECT_DIR$/src/main/messages/MessagesType.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/messages/NameMessage.java" afterPath="$PROJECT_DIR$/src/main/messages/NameMessage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/messages/ServerChatHistoryMessage.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/messages/ServerUserMessage.java" afterPath="$PROJECT_DIR$/src/main/messages/ServerUserMessage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/messages/TextMessage.java" afterPath="$PROJECT_DIR$/src/main/messages/ServerTextMessage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/user/User.java" afterPath="$PROJECT_DIR$/src/main/user/User.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/serverpart/Server.java" afterPath="$PROJECT_DIR$/src/main/serverpart/Server.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/serverpart/ServerThread.java" afterPath="$PROJECT_DIR$/src/main/serverpart/ServerThread.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/serverpart/net/Session.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/Session.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/serverpart/net/commands/UserCommand.java" afterPath="$PROJECT_DIR$/src/main/serverpart/net/commands/UserCommand.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,78 +25,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServerTextMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/messages/ServerTextMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <folding>
-                <element signature="e#352#353#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatFindCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatFindCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandSignIn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandSignIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandPass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandPass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatListCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatListCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/messages/ChatMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding>
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Session.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-681">
-              <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+            <state relative-caret-position="-222">
+              <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1960#1961#0" expanded="true" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#2115#2116#0" expanded="true" />
+                <element signature="e#2147#2148#0" expanded="true" />
+                <element signature="e#2241#2242#0" expanded="true" />
+                <element signature="e#2270#2271#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllCommands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+              <folding>
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageBlockingQueue.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/blockingqueue/MessageBlockingQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="34" column="65" lean-forward="true" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionMessageStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/blockingqueue/SessionMessageStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/serverpart/ServerThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/blockingqueue/ServerConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/serverpart/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,8 +135,8 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -212,20 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/ServerPart/Store/Test.java" />
-        <option value="$PROJECT_DIR$/src/tests/UserStoreClassTest.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/Store/UserStoreClassTest.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/Store/UserStoreClass.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/net/commands/SingInCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/net/Session.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/net/commands/SignInCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/net/commands/LoginCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/ClientPart/CommandHelp.java" />
-        <option value="$PROJECT_DIR$/src/main/ClientPart/ICommand.java" />
-        <option value="$PROJECT_DIR$/src/main/ClientPart/CommandSignIn.java" />
-        <option value="$PROJECT_DIR$/src/main/messages/ChatListMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/ServerPart/net/commands/ChatListCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/ClientPart/CommandChatList.java" />
         <option value="$PROJECT_DIR$/src/main/ClientPart/CommandLogin.java" />
         <option value="$PROJECT_DIR$/src/main/ClientPart/CommandPass.java" />
         <option value="$PROJECT_DIR$/src/main/ClientPart/CommandUser.java" />
@@ -251,18 +177,32 @@
         <option value="$PROJECT_DIR$/src/main/user/User.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/LoginCommand.java" />
         <option value="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandUser.java" />
-        <option value="$PROJECT_DIR$/src/main/serverpart/net/Session.java" />
-        <option value="$PROJECT_DIR$/src/main/serverpart/ServerThread.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/NameCommand.java" />
         <option value="$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandServerUser.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/Store/UserStoreClass.java" />
         <option value="$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandSend.java" />
-        <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatListCommand.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatCreateCommand.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/Store/MessageStoreClass.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatHistoryCommand.java" />
         <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/ChatFindCommand.java" />
+        <option value="$PROJECT_DIR$/src/tests/chat/ChatTest.java" />
+        <option value="$PROJECT_DIR$/src/main/chat/ChatTest.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/bq/SessionMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/net/commands/UserCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/bq/MyBk.java" />
+        <option value="$PROJECT_DIR$/src/main/bq/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/main/bq/ServerConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/blockingqueue/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/blockingqueue/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/blockingqueue/ServerConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/net/Session.java" />
+        <option value="$PROJECT_DIR$/src/main/blockingqueue/SessionMessageStore.java" />
+        <option value="$PROJECT_DIR$/src/main/serverpart/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/blockingqueue/ServerConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/blockingqueue/MessageBlockingQueue.java" />
       </list>
     </option>
   </component>
@@ -288,6 +228,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,37 +253,7 @@
               <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientPart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientPart" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientCommands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientPart" type="462c0819:PsiDirectoryNode" />
-              <item name="CommandsFromServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
+              <item name="blockingqueue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
@@ -349,38 +261,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="serverpart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="serverpart" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="serverpart" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="serverpart" type="462c0819:PsiDirectoryNode" />
-              <item name="Store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppCommon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AppCommon" type="b2602c69:ProjectViewProjectNode" />
@@ -390,10 +270,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,6 +290,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="main.chat" />
+      <recent name="tests.chat" />
       <recent name="main.ServerPart.Store" />
       <recent name="tests" />
     </key>
@@ -470,7 +350,7 @@
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="main.serverpart.*" />
+          <option name="PATTERN" value="main.serverpart.blockingqueue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -710,19 +590,18 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18154311" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2911184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2911184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23676248" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25945538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -734,6 +613,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -760,10 +640,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40131578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2911184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22919819" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25567323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -779,96 +659,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatFind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/IComandsServer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatCreate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/messages/ServerChatHistoryMessage.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandHistory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/messages/MessagesType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/ICommandServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="75" lean-forward="false" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/CommandsFromServer/CommandString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="85" lean-forward="false" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/BinaryProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/chat/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.12.jar!/com/mysql/cj/jdbc/result/ResultSetImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -887,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,29 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/UserCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3519">
-          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding>
-            <element signature="method#close#0;class#ClientHandler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/serverpart/Store/MessageStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,14 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#368#369#0" expanded="false" />
-            <element signature="e#395#396#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
-            <element signature="e#610#611#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,15 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,15 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/messages/ServerUserMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,44 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Store/UserStoreClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="160" column="74" lean-forward="false" selection-start-line="160" selection-start-column="74" selection-end-line="160" selection-end-column="74" />
-          <folding>
-            <marker date="1536246855404" expanded="true" signature="915:937" ph=" INSERT statement" />
-            <marker date="1536246855404" expanded="true" signature="915:941" ph=" INSERT statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1671" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1672" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1679" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1680" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1702" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1734" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="1646:1735" ph=" UPDATE statement" />
-            <marker date="1536246855404" expanded="true" signature="2435:2459" ph=" SELECT statement" />
-            <marker date="1536246855404" expanded="true" signature="3597:3621" ph=" SELECT statement" />
-            <marker date="1536246855404" expanded="true" signature="4565:4589" ph=" SELECT statement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/messages/ChatFindMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/ServerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,7 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,10 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#264#265#0" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,10 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#387#388#0" expanded="false" />
-            <element signature="e#414#415#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1081,15 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatCreateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,42 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Store/MessageStoreClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="137" column="82" lean-forward="false" selection-start-line="137" selection-start-column="82" selection-end-line="137" selection-end-column="82" />
-          <folding>
-            <marker date="1536252801234" expanded="true" signature="1001:1053" ph=" SELECT statement (CHATS)" />
-            <marker date="1536252801234" expanded="true" signature="1835:1879" ph=" SELECT statement (CHAT)" />
-            <marker date="1536252801234" expanded="true" signature="2611:2661" ph=" SELECT statement (MESSAGES)" />
-            <marker date="1536252801234" expanded="true" signature="3454:3691" ph=" SELECT statement" />
-            <marker date="1536252801234" expanded="true" signature="4585:4719" ph=" INSERT statement (MESSAGES)" />
-            <marker date="1536252801234" expanded="true" signature="4585:4735" ph=" INSERT statement (MESSAGES)" />
-            <marker date="1536252801234" expanded="true" signature="4585:4750" ph=" INSERT statement (MESSAGES)" />
-            <marker date="1536252801234" expanded="true" signature="5380:5505" ph=" INSERT statement (CHATS)" />
-            <marker date="1536252801234" expanded="true" signature="6020:6077" ph=" INSERT statement (CHAT)" />
-            <marker date="1536252801234" expanded="true" signature="6103:6159" ph=" SELECT statement (CHAT)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatHistoryCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,37 +796,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-681">
-          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/messages/ChatMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="459">
           <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding>
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatFindCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
+        <state relative-caret-position="816">
           <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1186,7 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,15 +824,203 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatCreateCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/messages/ChatFindMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/messages/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myexceptions/ParticipantMyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientCommands/CommandChatCreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Store/UserStoreClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="160" column="74" lean-forward="false" selection-start-line="160" selection-start-column="74" selection-end-line="160" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Store/SqlConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Store/MessageStoreClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="137" column="82" lean-forward="false" selection-start-line="137" selection-start-column="82" selection-end-line="137" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/t.java" />
+    <entry file="file://$PROJECT_DIR$/src/tests/chat/ChatTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/chat/ChatTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/chat/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ConnectionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/bq/Producer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatHistoryCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/ChatListCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/UserCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/messages/ServerUserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ClientPart/ClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1960#1961#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="e#2241#2242#0" expanded="true" />
+            <element signature="e#2270#2271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/net/commands/AllCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding>
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/serverpart/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/blockingqueue/SessionMessageStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/blockingqueue/ServerConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/blockingqueue/MessageBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="34" column="65" lean-forward="true" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

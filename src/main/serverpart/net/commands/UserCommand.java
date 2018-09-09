@@ -23,6 +23,7 @@ public class UserCommand implements Command {
         userMessage.setUser(user);
         try {
             session.send(userMessage);
+            System.out.print(userMessage);
         } catch (IOException e) {
             e.printStackTrace();
             throw new CommandException("Ошибка в команде UserCommand");
