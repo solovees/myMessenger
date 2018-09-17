@@ -68,11 +68,12 @@ public class MessageStoreClass implements MessageStore {
      */
     @Override
     public Chat getChatById(Long chatId) {
-        String sql = "SELECT * FROM messager.chat WHERE chat_id = " + chatId.toString();
+        String sql = "SELECT * FROM messenger.chat WHERE id = " + chatId.toString();
         Chat chat ;
         try {
             stmt = con.createStatement();
             res = stmt.executeQuery(sql);
+            res.next();
             chat = new Chat(chatId, res.getLong("admin"));
             return chat;
         } catch (SQLException e) {
@@ -80,8 +81,10 @@ public class MessageStoreClass implements MessageStore {
             return null;
         } finally {
             try {
-                stmt.close();
-                res.close();
+                if(stmt != null)
+                    stmt.close();
+                if(res != null)
+                    res.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

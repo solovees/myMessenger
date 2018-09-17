@@ -142,8 +142,9 @@ public class Chat implements Serializable{
         if(obj == null)
             return false;
         Chat other = (Chat) obj;
-        if(other.id.equals(id))
+        if(!other.id.equals(id))
             return false;
         return true;
     }
+
 }
