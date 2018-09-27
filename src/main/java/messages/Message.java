@@ -46,4 +46,24 @@ public class Message implements Serializable{
         this.login = login;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj)
+            return true;
+        if(getClass() != obj.getClass())
+            return  false;
+        if(obj == null)
+            return false;
+        Message other = (Message) obj;
+        if(!login.equals(other.login))
+            return false;
+        if(!messagesType.equals(other.messagesType))
+            return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return login.hashCode() + messagesType.hashCode()*3;
+    }
 }

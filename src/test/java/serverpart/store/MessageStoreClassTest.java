@@ -30,7 +30,7 @@ public class MessageStoreClassTest {
     private static ResultSet res;
 
     @Test
-    public void getChatsByUserId() {
+    public void getChatsByUserIdTest() {
         String sql = "SELECT chat_id FROM messenger.chats WHERE user_id = 14" ;
         LinkedList<Long> expected = new LinkedList<Long>();
         try {
@@ -49,7 +49,7 @@ public class MessageStoreClassTest {
     }
 
     @Test
-    public void getChatById() {
+    public void getChatByIdTest() {
         String sql = "SELECT * FROM messenger.chat WHERE id = 5";
         Chat expected = null;
         try {
@@ -65,7 +65,7 @@ public class MessageStoreClassTest {
     }
 
     @Test
-    public void getMessagesFromChat() {
+    public void getMessagesFromChatTest() {
         String sql = "SELECT id FROM messenger.messages WHERE chat_id = 5";
         LinkedList<Long> expected = new LinkedList<Long>();
         try {
@@ -83,7 +83,7 @@ public class MessageStoreClassTest {
     }
 
     @Test
-    public void getMessageById() {
+    public void getMessageByIdTest() {
         String sql = "SELECT " +
                 "m.content as content, " +
                 "u.login as login " +
